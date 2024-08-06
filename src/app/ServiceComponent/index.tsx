@@ -65,16 +65,16 @@ const ServiceComponent = () => {
         } else if (serviceId && providerId) {
             const payload = {
                 "vat": vat,
-                "constructorArguments": {
-                    "_tokenName": {
+                "constructorArguments": [
+                    {
                         "value": tokenName,
-                        "index": 1
+                        "name": "tokenName"
                     },
-                    "_tokenSymbol": {
+                    {
                         "value": tokenSymbol,
-                        "index": 2
+                        "name": "tokenSymbol"
                     }
-                }
+                ]
             };
 
             setServiceId("");
